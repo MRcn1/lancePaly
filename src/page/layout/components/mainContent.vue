@@ -36,8 +36,7 @@
     .content {
         width: 100%;
         background-color: #fff;
-        border-radius: 5px;
-        padding: 20px;
+        border-radius: 1px;
         box-shadow: 1px 1px 1px 1px #ccc;
     }
 

@@ -7,7 +7,7 @@
                         <span>{{item}}</span>
                     </template>
                     <el-menu-item-group>
-                        <el-menu-item :index="num+'-'+ind" v-for="(value,ind) in newchildren" :key="ind" :class="value.path==$route.path?'active':''" @click="toPath(value.path)" v-if="item==value.meta.top">{{value.name}}</el-menu-item>
+                        <el-menu-item :index="num+'-'+ind" v-for="(value,ind) in newchildren" :key="ind" :class="value.path==$route.path?'active':''" @click="toPath(value.path)" v-if="item==value.meta.top" >{{value.name}}</el-menu-item>
                     </el-menu-item-group>
                 </el-submenu>
             </el-menu>
@@ -49,7 +49,6 @@
                 this.classify = [...new Set(classify)];
                 this.newchildren = [...new Set(newchildren)];
 
-                console.log(this.$route.matched[0].name, this.name)
                 if (this.name != this.$route.matched[0].name) {
                     this.openeds = ['0']
                     this.name = this.$route.matched[0].name

@@ -15,7 +15,7 @@
     export default {
         data() {
             return {
-                
+
             }
         },
         components: {
@@ -25,21 +25,25 @@
         },
         created() {},
         methods: {}
-    
+
     };
 </script>
 
 <style scoped lang='less'>
-.layout{
-    height: 100%;
-}
-.app-main{
-    display: flex;
-    height: calc(100% - 60px); 
-    .mainContent{
-        width: 100%;
-        background-color: #fafafa;
-        padding: 20px;
+    .layout {
+        height: 100%;
     }
-}
+
+    .app-main {
+        display: flex;
+        height: calc(100% - 65px);
+
+        .mainContent {
+            width: 100%;
+            background-color: #fafafa;
+            padding: 20px;
+        }
+    }
+
+    
 </style>
