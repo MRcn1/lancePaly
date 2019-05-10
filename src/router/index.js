@@ -25,8 +25,16 @@ export default new Router({
             children: [
                 {
                     path: '',
-                    redirect: '/tradingFlow'
+                    redirect: '/index'
                 },
+                {
+                    path: '/index',
+                    name: '首页',
+                    component(resolve) {
+                        require(['../page/index'], resolve)
+                    },
+                },
+                // 交易管理
                 {
                     path: '/tradingFlow',
                     name: '交易流水',
@@ -34,7 +42,31 @@ export default new Router({
                         require(['../page/transaction/tradingFlow'], resolve)
                     },
                     meta: {
-                        top: "交易管理"
+                        top: "交易管理",
+                        icon:'syicon_21.png',
+                    },
+                },
+                {
+                    path: '/abc',
+                    name: 'abc',
+                    component(resolve) {
+                        require(['../page/transaction/abc'], resolve)
+                    },
+                    meta: {
+                        top: "交易管理",
+                        icon:'syicon_21.png',
+                    },
+                },
+                // 结算管理
+                {
+                    path: '/settlementMan',
+                    name: '结算管理',
+                    component(resolve) {
+                        require(['../page/settlementMan/settlementMan'], resolve)
+                    },
+                    meta: {
+                        top: "结算管理 ",
+                        icon:'syicon_21.png',
                     },
                 },
             ]

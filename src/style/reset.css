@@ -82,4 +82,29 @@ textarea {
     background-color: #fffaf4;
     padding-left: 50px;
     color: #333333;
+    position: relative;
+}
+.titleLan::before{
+    position: absolute;
+    content: ' ';
+    width: 5px;
+    height: 20px;
+    background-color: #f29223;
+    top: 19px;
+    left: 17px;
+}
+.searchLan{
+    padding: 17px 20px 0 20px;
+}
+.summaryLan{
+    width: 100%;
+    margin-top: 10px;
+    background-color: #fff;
+    border-top: 5px solid #f1f1f1;
+    padding: 20px;
+}
+.paginationLan{
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
 }

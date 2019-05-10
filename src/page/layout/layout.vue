@@ -40,7 +40,7 @@
 
         .mainContent {
             width: 100%;
-            background-color: #fafafa;
+            background-color: #f1eded;
             padding: 20px;
         }
     }

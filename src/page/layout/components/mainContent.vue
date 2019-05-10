@@ -37,7 +37,7 @@
         width: 100%;
         background-color: #fff;
         border-radius: 1px;
-        box-shadow: 1px 1px 1px 1px #ccc;
+        box-shadow: 1px 1px 1px 1px #e5e5e5;
     }
 
     .fade-enter-active,

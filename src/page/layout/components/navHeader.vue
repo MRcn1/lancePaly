@@ -2,7 +2,7 @@
     <div class='navHeader'>
         <header class="layout-header">
             <div class="img">
-                <img src="../../../assets/syicon_03.png" alt="">
+                <img src="../../../assets/logo2.png" alt="">
             </div>
             <div class="title">
                 <span>莱麦支付中心</span>
