@@ -31,9 +31,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="copyright">
-                    Copyright © 广州市莱麦互联网科技有限公司
-                </div>
             </el-col>
         </el-row>
     </div>
@@ -54,8 +51,8 @@
 
         },
         methods: {
-            login() {
-                this.$router.push({ path: '/index' })
+            login(){
+                this.$router.push({path:'/index'})
             }
         },
     }
@@ -65,8 +62,7 @@
     .headerlogo {
         width: 40%;
         min-width: 400px;
-        height: 100px;
-        padding-top: 5px;
+        height: 90px;
 
         .headerlogo-logo {
             width: 390px;
@@ -148,15 +144,6 @@
                 }
             }
         }
-    }
-
-    .copyright {
-        font-size: 16px;
-        line-height: 36px;
-        letter-spacing: 1px;
-        color: #999999;
-        text-align: center;
-        padding-top: 10px;
     }
 </style>
 

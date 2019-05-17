@@ -47,10 +47,10 @@ export default new Router({
                     },
                 },
                 {
-                    path: '/abc',
-                    name: 'abc',
+                    path: '/LaundryList',
+                    name: '代付流水',
                     component(resolve) {
-                        require(['../page/transaction/abc'], resolve)
+                        require(['../page/transaction/LaundryList'], resolve)
                     },
                     meta: {
                         top: "交易管理",
