@@ -102,7 +102,7 @@ export default {
           type: "总笔数"
         },
         {
-          number: "￥7,000.00",
+          number: "￥7,000.01",
           type: "交易总额"
         },
         {
