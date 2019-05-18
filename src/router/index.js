@@ -43,7 +43,7 @@ export default new Router({
                     },
                     meta: {
                         top: "交易管理",
-                        icon:'syicon_21.png',
+                        icon: 'syicon_21.png',
                     },
                 },
                 {
@@ -54,7 +54,7 @@ export default new Router({
                     },
                     meta: {
                         top: "交易管理",
-                        icon:'syicon_21.png',
+                        icon: 'syicon_21.png',
                     },
                 },
                 // 结算管理
@@ -66,9 +66,21 @@ export default new Router({
                     },
                     meta: {
                         top: "结算管理 ",
-                        icon:'syicon_21.png',
+                        icon: 'syicon_21.png',
                     },
                 },
+                // 经营报表
+                {
+                    path: '/business',
+                    name: '余额查询',
+                    component(resolve) {
+                        require(['../page/business/businessreport'], resolve)
+                    },
+                    meta: {
+                        top: "经营报表",
+                        icon: 'syicon_21.png'
+                    }
+                }
             ]
         },
     ]
