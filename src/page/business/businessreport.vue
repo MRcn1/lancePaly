@@ -1,48 +1,23 @@
 <template>
   <!-- Lan结尾的有公共样式，在reset.css -->
-  <div class="tradingFlow">
+  <div class="tradingFlow" :style="{height: lanHeight}">
     <p class="titleLan">余额查询</p>
     <div class="searchLan">
-      <el-form :inline="true" :model="formInline" class="demo-form-inline">
-        <el-form-item label="商户名称" label-width="120px">
-          <el-select v-model="formInline.region" placeholder="请选择">
-            <el-option label="区域一" value="shanghai"></el-option>
-            <el-option label="区域二" value="beijing"></el-option>
-          </el-select>
-        </el-form-item>
-        <el-form-item style="margin-left:50px;">
-          <el-button type="warning" @click="onSubmit">查询</el-button>
-          <el-button @click="onSubmit">重置</el-button>
-        </el-form-item>
-      </el-form>
-    </div>
-    <div class="tableLan">
-      <el-table
-        :data="tableData"
-        style="width: 100%"
-        :header-cell-style="{background:'#f4f9ff',color:'#666666',fontWeight:'normal'}"
-      >
-        <el-table-column label="商户名称" align="center">
-          <template slot-scope="scope">{{ scope.row.date }}</template>
-        </el-table-column>
-        <el-table-column label="可代付余额" align="center"></el-table-column>
-        <el-table-column label="冻结金额" align="center"></el-table-column>
-        <el-table-column label="不可代付金额" align="center"></el-table-column>
-        <el-table-column label="可代付余额A" align="center"></el-table-column>
-        <el-table-column label="可代付余额A" align="center"></el-table-column>
-        <el-table-column label="支付通道" align="center"></el-table-column>
-      </el-table>
-    </div>
-    <div class="paginationLan">
-      <el-pagination
-        @size-change="handleSizeChange"
-        @current-change="handleCurrentChange"
-        :current-page.sync="currentPage2"
-        :page-sizes="[20, 30, 40]"
-        :page-size="pageSize"
-        layout="sizes, prev, pager, next"
-        :total="total"
-      ></el-pagination>
+      <div class="datablock">
+        <img src="http://imageqiniuyun.lvxiaoluo.com/u35.png">
+        <div class="data">
+          <p>可代付余额</p>
+          <p>￥1000000.00</p>
+        </div>
+      </div>
+
+      <div class="datablock">
+        <img src="http://imageqiniuyun.lvxiaoluo.com/u36.png">
+        <div class="data">
+          <p>不可代付余额</p>
+          <p>￥1000000.00</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -56,13 +31,35 @@ export default {
         region: ""
       },
       tableData: [],
-      currentPage2: 1,
+      currentPage2: 2,
       pageSize: 20,
-      total: 200
+      total: 200,
+      showdata: [
+        {
+          number: "2",
+          type: "商户数量"
+        },
+        {
+          number: "6",
+          type: "总笔数"
+        },
+        {
+          number: "￥7,000.01",
+          type: "交易总额"
+        },
+        {
+          number: "￥7,0.00",
+          type: "手续费合计"
+        }
+      ],
+      lanHeight: ""
     };
   },
   components: {},
-  created() {},
+  created() {
+    const vm = this;
+    vm.lanHeight = window.innerHeight - 85 + "px";
+  },
   methods: {
     handleSizeChange(val) {
       //更改每页条数
@@ -78,4 +75,28 @@ export default {
 </script>
 
 <style scoped lang='less'>
+.searchLan {
+  display: flex;
+
+  .datablock {
+    width: 35%;
+    border: 1px solid #f2f2f2;
+    margin: 2% 10%;
+    display: flex;
+    align-items: center;
+    padding: 3% 0%;
+    box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 0.3);
+    img {
+      margin-left: 20%;
+      width: 48px;
+      height: 45px;
+    }
+    .data {
+      margin: 0% 1%;
+      width: 30%;
+      text-align: center;
+      font-size: 16px;
+    }
+  }
+}
 </style>
